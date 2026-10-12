@@ -278,3 +278,15 @@ footer{border-top:1px solid var(--line);padding:24px 38px;display:flex;justify-c
   body.print-all>header,body.print-all>.layout,body.print-all>footer{display:none!important}
   body.print-all>#print-document{display:block}
 }
+
+/* Keep the site controls visible while reading. */
+@media screen {
+  :root{--header-height:83px}
+  html{scroll-padding-top:calc(var(--header-height) + 16px)}
+  body>header{position:sticky;top:0;z-index:50}
+  aside{top:var(--header-height);max-height:calc(100vh - var(--header-height))}
+  @media(max-width:720px){
+    :root{--header-height:70px}
+    aside{top:auto;max-height:none}
+  }
+}
