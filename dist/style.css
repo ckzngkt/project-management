@@ -290,3 +290,19 @@ footer{border-top:1px solid var(--line);padding:24px 38px;display:flex;justify-c
     aside{top:auto;max-height:none}
   }
 }
+
+/* 複数選ぶ問題・模擬試験・コード（2026-10-24 追加） */
+.quiz button.selected{border-color:var(--accent);background:var(--tint)}
+.quiz button.correct{background:var(--ok-bg);border-color:var(--accent)}
+.quiz button.wrong{background:var(--ng-bg);border-color:var(--ng)}
+.quiz button:disabled{cursor:default;color:var(--ink)}
+.quiz .check-multi{display:inline-block;width:auto;text-align:center;background:var(--accent);color:#fff;border-color:var(--accent)}
+.multi-tag{display:inline-block;font-size:10px;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:20px;padding:0 8px;margin-left:4px;vertical-align:middle}
+.tags .tag-exam{background:var(--accent);color:#fff}
+.feedback a{white-space:nowrap}
+.exam-table td:nth-child(n+2){white-space:nowrap}
+.lesson pre{background:var(--code);color:var(--code-ink);border-radius:9px;padding:16px 18px;overflow:auto;font:12.5px/1.8 ui-monospace,SFMono-Regular,Menlo,monospace;margin:16px 0}
+.lesson code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+.lesson p code,.lesson li code,.lesson td code{background:var(--tint);padding:1px 5px;border-radius:4px}
+@media print{.lesson pre{white-space:pre-wrap;background:#f2f2f2;color:#111}}
+
